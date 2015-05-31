@@ -15,7 +15,8 @@ Currently provided are:
 * node-sonos-web-controller
 
 ## TODO
-* test on Debian / RHEL / rpi
+* test on Debian / Fedora
+* running on raspberry pi
 * take a closer look at chromecast-like solutions
 
 ## Platform
@@ -26,7 +27,7 @@ Currently supported platforms:
 
 ## Usage
 
-Include selected recipes in the runlist. There is nothign to tweak (yet?).
+Include selected recipes in the runlist. There is nothing to tweak (yet?).
 
 ## Recipes
 
