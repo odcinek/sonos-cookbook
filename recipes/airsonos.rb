@@ -40,6 +40,7 @@ git '/opt/sonos/airsonos' do
 end
 
 nodejs_npm 'airsonos' do
+  json true
   path '/opt/sonos/airsonos'
 end
 
