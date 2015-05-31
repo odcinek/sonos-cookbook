@@ -15,6 +15,7 @@ Currently provided:
 * node-sonos-web-controller
 
 ## TODO
+* put web ui behind nginx
 * test on Debian / Fedora
 * running on raspberry pi
 * take a closer look at chromecast-like solutions
