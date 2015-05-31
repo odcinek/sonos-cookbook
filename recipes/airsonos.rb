@@ -73,5 +73,5 @@ end
 
 service 'airsonos' do
   supports restart: true, start: true, stop: true, reload: false
-  action :enable
+  action [ :enable, :start ]
 end
