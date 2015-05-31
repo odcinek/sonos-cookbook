@@ -4,9 +4,19 @@
 [![Build Status](https://travis-ci.org/odcinek/sonos-cookbook.svg?branch=master)](https://travis-ci.org/odcinek/sonos-cookbook)
 [![Dependency Status](http://img.shields.io/gemnasium/odcinek/sonos-cookbook.svg?style=flat)](https://gemnasium.com/odcinek/sonos-cookbook)
 
-Installs and configures [sonos](http://sonos.com/) addons built by the Community
+Installs and configures an opinionated selection of [sonos](http://sonos.com/) addons.
+
+As a new sonos user I've found some functionality lacking. Community provides a few projects to fill the gaps, but they are neither easy to install without a ton of fiddling, nor well organised.
+
+This is meant to be run on your chef-managed home server.
+
+Currently provided are:
 * airsonos
 * node-sonos-web-controller
+
+## TODO
+* test on Debian / RHEL / rpi
+* take a closer look at chromecast-like solutions
 
 ## Platform
 
