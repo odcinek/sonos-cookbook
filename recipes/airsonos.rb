@@ -41,7 +41,6 @@ end
 
 nodejs_npm 'airsonos' do
   path '/opt/sonos/airsonos'
-  json true
 end
 
 link '/usr/bin/airsonos' do

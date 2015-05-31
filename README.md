@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/odcinek/sonos-cookbook.svg?branch=master)](https://travis-ci.org/odcinek/sonos-cookbook)
 [![Dependency Status](http://img.shields.io/gemnasium/odcinek/sonos-cookbook.svg?style=flat)](https://gemnasium.com/odcinek/sonos-cookbook)
 
-Installs and configures [sonos](http://sonos.com/) system addons built by the Community
+Installs and configures [sonos](http://sonos.com/) addons built by the Community
 * airsonos
 * node-sonos-web-controller
 
