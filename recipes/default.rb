@@ -21,5 +21,9 @@
 include_recipe "nodejs"
 include_recipe "nodejs::npm"
 
+package 'git' do
+  action :install
+end
+
 include_recipe 'sonos::airsonos'
 include_recipe 'sonos::webcontroller'

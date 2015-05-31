@@ -18,14 +18,28 @@
 # limitations under the License.
 #
 
-directory "/opt/sonos/airsonos" do
-  owner 'root'
-  group 'root'
-  mode '0755'
-  action :create
-  recursive true
-end
+#directory "/opt/sonos/airsonos" do
+#  owner 'root'
+#  group 'root'
+#  mode '0755'
+#  action :create
+#  recursive true
+#end
 
 nodejs_npm "airsonos" do
   url "github stephen/airsonos"
+end
+
+template "/etc/init.d/airsonos" do
+  path "/etc/init.d/airsonos"
+  source "airsonos.erb"
+  owner "root"
+  group "root"
+  mode "0755"
+  notifies :reload, "service[airsonos]", :delayed
+end
+
+service "airsonos" do
+  supports :restart => true, :start => true, :stop => true, :reload => true
+  action :enable
 end

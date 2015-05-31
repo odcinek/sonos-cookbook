@@ -18,4 +18,6 @@
 # limitations under the License.
 #
 
-#libavahi-compat-libdnssd-dev
+package 'libavahi-compat-libdnssd-dev' do
+  action :install
+end
