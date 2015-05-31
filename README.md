@@ -4,17 +4,11 @@ This cookbook installs and configures sonos addons built by the Community
 * airsonos
 * node-sonos-web-controller
 
-# Requirements
-
 ## Platform
 
 Currently supported platforms:
 
 * Ubuntu 14.04
-
-# Attributes
-
-See `./attributes/default.rb`.
 
 # Recipes
 
@@ -26,7 +20,7 @@ AirPlay to Sonos
 A web based controller for Sonos utilizing web sockets for a native look and feel
 * https://github.com/jishi/node-sonos-web-controller
 
-## default
+## sonos::default
 
 Includes all other recipes.
 
