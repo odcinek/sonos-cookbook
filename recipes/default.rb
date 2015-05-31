@@ -18,8 +18,8 @@
 # limitations under the License.
 #
 
-include_recipe "nodejs"
-include_recipe "nodejs::npm"
+include_recipe 'nodejs'
+include_recipe 'nodejs::npm'
 
 package 'git' do
   action :install

@@ -22,7 +22,7 @@ package 'g++' do
   action :install
 end
 
-directory "/opt/sonos/airsonos" do
+directory '/opt/sonos/airsonos' do
   owner 'root'
   group 'root'
   mode '0755'
@@ -30,10 +30,10 @@ directory "/opt/sonos/airsonos" do
   recursive true
 end
 
-#nodejs_npm "airsonos" do
+# nodejs_npm "airsonos" do
 #  not_if 'sudo npm list -g | grep airsonos'
 #  url "stephen/airsonos"
-#end
+# end
 
 git '/opt/sonos/airsonos' do
   repository 'https://github.com/stephen/airsonos.git'
@@ -48,16 +48,16 @@ link '/usr/bin/airsonos' do
   to '/usr/lib/node_modules/airsonos/index.js'
 end
 
-template "/etc/init.d/airsonos" do
-  path "/etc/init.d/airsonos"
-  source "airsonos.erb"
-  owner "root"
-  group "root"
-  mode "0755"
-  notifies :reload, "service[airsonos]", :delayed
+template '/etc/init.d/airsonos' do
+  path '/etc/init.d/airsonos'
+  source 'airsonos.erb'
+  owner 'root'
+  group 'root'
+  mode '0755'
+  notifies :reload, 'service[airsonos]', :delayed
 end
 
-service "airsonos" do
-  supports :restart => true, :start => true, :stop => true, :reload => true
+service 'airsonos' do
+  supports restart: true, start: true, stop: true, reload: true
   action :enable
 end
