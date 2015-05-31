@@ -18,12 +18,20 @@
 # limitations under the License.
 #
 
+[
+  'avahi-daemon',
+  'avahi-discover',
+  'libnss-mdns',
+  'libavahi-compat-libdnssd-dev',
+  'git',
+].each do |package|
+  package package do
+    action :install
+  end
+end
+
 include_recipe 'nodejs'
 include_recipe 'nodejs::npm'
-
-package 'git' do
-  action :install
-end
 
 include_recipe 'sonos::airsonos'
 include_recipe 'sonos::webcontroller'

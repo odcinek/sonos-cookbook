@@ -2,7 +2,6 @@
 driver:
   name: vagrant
   network:
-    - ["private_network", {ip: "192.168.33.33"}]
     - ["forwarded_port", {guest: 8080, host: 9090}]
 
 provisioner:

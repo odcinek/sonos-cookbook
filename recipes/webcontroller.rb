@@ -18,10 +18,6 @@
 # limitations under the License.
 #
 
-package 'libavahi-compat-libdnssd-dev' do
-  action :install
-end
-
 directory '/opt/sonos/webcontroller' do
   owner 'root'
   group 'root'
@@ -45,4 +41,18 @@ directory '/opt/sonos/webcontroller/cache' do
   mode '0755'
   action :create
   recursive true
+end
+
+template '/etc/init.d/webcontroller' do
+  path '/etc/init.d/webcontroller'
+  source 'webcontroller.erb'
+  owner 'root'
+  group 'root'
+  mode '0755'
+  notifies :restart, 'service[webcontroller]'
+end
+
+service 'webcontroller' do
+  supports restart: true, start: true, stop: true, reload: false
+  action [ :enable, :start ]
 end
