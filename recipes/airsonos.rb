@@ -44,6 +44,19 @@ nodejs_npm 'airsonos' do
   path '/opt/sonos/airsonos'
 end
 
+# This is sadsauce. Someone more node-saavy should take a look.
+[
+  '/opt/sonos/airsonos/node_modules/nodetunes/node_modules/mdns',
+  '/opt/sonos/airsonos/node_modules/nicercast/node_modules/lame',
+].each do |dir|
+  execute dir do
+    action :run
+    cwd dir
+    command '/usr/lib/node_modules/npm/bin/node-gyp-bin/node-gyp' +
+      ' BUILDTYPE=Release rebuild'
+  end
+end
+
 link '/usr/bin/airsonos' do
   only_if 'stat /opt/sonos/airsonos/index.js'
   to '/opt/sonos/airsonos/index.js'
