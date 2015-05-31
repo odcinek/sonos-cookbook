@@ -1,6 +1,6 @@
 # sonos cookbook
 
-This cookbook installs and configures sonos addons built by the Community
+This cookbook installs and configures [sonos](http://sonos.com/) system addons built by the Community
 * airsonos
 * node-sonos-web-controller
 
