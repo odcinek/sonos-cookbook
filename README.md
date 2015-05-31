@@ -14,14 +14,14 @@ Currently provided:
 * airsonos
 * node-sonos-web-controller
 
+## In progress
+* [sonosblue](https://github.com/odcinek/sonosblue) support
+
 ## TODO
 * put web ui behind nginx
 * test on Debian / Fedora
 * running on raspberry pi
 * take a closer look at chromecast-like solutions
-
-## In progress
-* [sonosblue](https://github.com/odcinek/sonosblue) support
 
 ## Platform
 
