@@ -1,13 +1,15 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["private_network", {ip: "192.168.33.33"}]
+    - ["forwarded_port", {guest: 8080, host: 9090}]
 
 provisioner:
   name: chef_zero
 
 platforms:
   - name: ubuntu-14.04
-  - name: fedora-21
 
 suites:
   - name: default

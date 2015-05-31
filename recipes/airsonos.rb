@@ -30,11 +30,6 @@ directory '/opt/sonos/airsonos' do
   recursive true
 end
 
-# nodejs_npm "airsonos" do
-#  not_if 'sudo npm list -g | grep airsonos'
-#  url "stephen/airsonos"
-# end
-
 git '/opt/sonos/airsonos' do
   repository 'https://github.com/stephen/airsonos.git'
 end

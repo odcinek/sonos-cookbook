@@ -21,3 +21,28 @@
 package 'libavahi-compat-libdnssd-dev' do
   action :install
 end
+
+directory '/opt/sonos/webcontroller' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+  recursive true
+end
+
+git '/opt/sonos/webcontroller' do
+  repository 'https://github.com/jishi/node-sonos-web-controller'
+end
+
+nodejs_npm 'sonos-web-controller' do
+  json true
+  path '/opt/sonos/webcontroller'
+end
+
+directory '/opt/sonos/webcontroller/cache' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+  recursive true
+end
