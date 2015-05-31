@@ -6,13 +6,16 @@
 
 Installs and configures an opinionated selection of [sonos](http://sonos.com/) addons.
 
-As a new sonos user I've found some functionality lacking. Community provides a few projects to fill the gaps, but they are neither easy to install without a ton of fiddling, nor well organised.
+As a new sonos user I've found some functionality lacking. Fortunately community provided a few projects to fill the gaps.
 
 This is meant to be run on your chef-managed home server.
 
-Currently provided are:
+Currently provided:
 * airsonos
 * node-sonos-web-controller
+
+## In progress
+* [sonosblue](https://github.com/odcinek/sonosblue) support
 
 ## TODO
 * test on Debian / Fedora
@@ -38,6 +41,10 @@ AirPlay to Sonos
 ## sonos::webcontroller
 A web based controller for Sonos utilizing web sockets for a native look and feel
 * https://github.com/jishi/node-sonos-web-controller
+
+## sonos::sonosblue
+Bluetooth audio target for sonos
+* https://github.com/odcinek/sonosblue
 
 ## sonos::default
 

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: sonos
-# Recipe:: default
+# Recipe:: sonosblue
 #
 # Author:: Marcin Sawicki <odcinek@gmail.com>
 # Copyright:: (c) 2015, Marcin Sawicki
@@ -17,22 +17,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-[
-  'avahi-daemon',
-  'avahi-discover',
-  'libnss-mdns',
-  'libavahi-compat-libdnssd-dev',
-  'git',
-].each do |package|
-  package package do
-    action :install
-  end
-end
-
-include_recipe 'nodejs'
-include_recipe 'nodejs::npm'
-
-include_recipe 'sonos::airsonos'
-include_recipe 'sonos::webcontroller'
-include_recipe 'sonos::sonosblue'
