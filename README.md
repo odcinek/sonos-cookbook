@@ -2,7 +2,7 @@
 
 [![Cookbook Version](https://img.shields.io/cookbook/v/sonos.svg?style=flat)](https://supermarket.chef.io/cookbooks/sonos)
 [![Build Status](https://travis-ci.org/odcinek/sonos-cookbook.svg?branch=master)](https://travis-ci.org/odcinek/sonos-cookbook)
-[![Dependency Status](http://img.shields.io/gemnasium/odcinek/sonos.svg?style=flat)](https://gemnasium.com/odcinek/sonos)
+[![Dependency Status](http://img.shields.io/gemnasium/odcinek/sonos-cookbook.svg?style=flat)](https://gemnasium.com/odcinek/sonos-cookbook)
 
 Installs and configures [sonos](http://sonos.com/) system addons built by the Community
 * airsonos
