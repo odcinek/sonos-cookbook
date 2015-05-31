@@ -44,8 +44,8 @@ nodejs_npm 'airsonos' do
 end
 
 link '/usr/bin/airsonos' do
-  only_if 'stat /usr/lib/node_modules/airsonos/index.js'
-  to '/usr/lib/node_modules/airsonos/index.js'
+  only_if 'stat /opt/sonos/airsonos/index.js'
+  to '/opt/sonos/airsonos/index.js'
 end
 
 template '/etc/init.d/airsonos' do

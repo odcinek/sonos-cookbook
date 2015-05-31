@@ -14,6 +14,10 @@ Currently supported platforms:
 
 * Ubuntu 14.04
 
+## Usage
+
+Include selected recipes in the runlist. There is nothign to tweak (yet?).
+
 ## Recipes
 
 ## sonos::airsonos
