@@ -68,10 +68,10 @@ template '/etc/init.d/airsonos' do
   owner 'root'
   group 'root'
   mode '0755'
-  notifies :reload, 'service[airsonos]', :delayed
+  notifies :restart, 'service[airsonos]'
 end
 
 service 'airsonos' do
-  supports restart: true, start: true, stop: true, reload: true
+  supports restart: true, start: true, stop: true, reload: false
   action :enable
 end
