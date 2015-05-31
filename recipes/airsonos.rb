@@ -18,16 +18,35 @@
 # limitations under the License.
 #
 
-#directory "/opt/sonos/airsonos" do
-#  owner 'root'
-#  group 'root'
-#  mode '0755'
-#  action :create
-#  recursive true
+package 'g++' do
+  action :install
+end
+
+directory "/opt/sonos/airsonos" do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+  recursive true
+end
+
+#nodejs_npm "airsonos" do
+#  not_if 'sudo npm list -g | grep airsonos'
+#  url "stephen/airsonos"
 #end
 
-nodejs_npm "airsonos" do
-  url "github stephen/airsonos"
+git '/opt/sonos/airsonos' do
+  repository 'https://github.com/stephen/airsonos.git'
+end
+
+nodejs_npm 'airsonos' do
+  path '/opt/sonos/airsonos'
+  json true
+end
+
+link '/usr/bin/airsonos' do
+  only_if 'stat /usr/lib/node_modules/airsonos/index.js'
+  to '/usr/lib/node_modules/airsonos/index.js'
 end
 
 template "/etc/init.d/airsonos" do

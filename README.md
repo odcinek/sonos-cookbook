@@ -1,6 +1,6 @@
 # sonos cookbook
 
-This cookbook installs and configures [sonos](http://sonos.com/) system addons built by the Community
+Istalls and configures [sonos](http://sonos.com/) system addons built by the Community
 * airsonos
 * node-sonos-web-controller
 
@@ -10,7 +10,7 @@ Currently supported platforms:
 
 * Ubuntu 14.04
 
-# Recipes
+## Recipes
 
 ## sonos::airsonos
 AirPlay to Sonos
