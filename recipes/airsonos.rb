@@ -23,6 +23,7 @@ directory "/opt/sonos/airsonos" do
   group 'root'
   mode '0755'
   action :create
+  recursive true
 end
 
 nodejs_npm "airsonos" do
